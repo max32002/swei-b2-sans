@@ -737,6 +737,7 @@ class Rule():
             skip_coordinate_rule.append(new_code)
 
         # update [next next curve]
+        # PS: 目前使用的解法問題多多，應該有更好的解法。
         if format_dict_array[(idx+2)%nodes_length]['t']=="c":
             old_code_string = format_dict_array[(idx+2)%nodes_length]['code']
             old_code_array = old_code_string.split(' ')
@@ -787,14 +788,17 @@ class Rule():
                 # for uni7D93 經的幺，要不要offset.
                 # virtal_distance = 29
                 # x1y1_distance = 35
-                if x1y1_distance <= int(virtal_distance * 1.3):
-                    x1y1_distance_remain = spline_util.get_distance(orig_x2,orig_y2,int(old_code_array[1]),int(old_code_array[2]))
-                    #print("orig_x2,orig_y2:",orig_x2,orig_y2)
-                    #print("x1y1_distance_remain:",x1y1_distance_remain)
-                    
-                    # 需要夠長的空間來做 offset
-                    if x1y1_distance_remain >= virtal_distance * 3:
-                        is_virtual_dot_need_offset = True
+                if x1y1_distance <= int(virtal_distance * 1.0):
+                    is_virtual_dot_need_offset = True
+                else:
+                    if x1y1_distance <= int(virtal_distance * 1.3):
+                        x1y1_distance_remain = spline_util.get_distance(orig_x2,orig_y2,int(old_code_array[1]),int(old_code_array[2]))
+                        #print("orig_x2,orig_y2:",orig_x2,orig_y2)
+                        #print("x1y1_distance_remain:",x1y1_distance_remain)
+                        
+                        # 需要夠長的空間來做 offset
+                        if x1y1_distance_remain >= virtal_distance * 3:
+                            is_virtual_dot_need_offset = True
 
                 #print("virtual distance:", virtal_distance)
                 #print("x1y1 distance:", x1y1_distance)
