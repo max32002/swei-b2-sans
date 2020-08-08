@@ -298,6 +298,12 @@ class Rule(Rule.Rule):
                         is_match_d_base_rule, fail_code = self.going_xd_down(format_dict_array,idx)
                         is_match_pattern = is_match_d_base_rule
 
+                # for RAINBOW
+                if self.config.PROCESS_MODE in ["RAINBOW"]:
+                    if is_match_pattern:
+                        is_match_d_base_rule, fail_code = self.going_xd_down(format_dict_array,idx)
+                        is_match_pattern = not is_match_d_base_rule
+
                 inside_stroke_flag = False
                 # B2,B4 skip check image.
                 if self.config.NEED_LOAD_BMP_IMAGE:

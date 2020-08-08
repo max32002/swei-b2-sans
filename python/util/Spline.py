@@ -668,13 +668,13 @@ class Spline():
             #return spline_dict
         is_common_enable = True
 
-        if self.config.PROCESS_MODE in ["B2","B4","XD","HALFMOON"]:
+        if self.config.PROCESS_MODE in ["B2","B4","XD","RAINBOW","HALFMOON"]:
             is_common_enable = False
 
         if is_common_enable:
             is_modified, inside_stroke_dict, skip_coordinate, skip_coordinate_rule = self.trace_common(stroke_dict, key, unicode_int, bmp_image, y_offset, inside_stroke_dict, skip_coordinate, skip_coordinate_rule)
 
-        if self.config.PROCESS_MODE in ["XD","HALFMOON"]:
+        if self.config.PROCESS_MODE in ["XD","RAINBOW","HALFMOON"]:
             base_is_modified, inside_stroke_dict, skip_coordinate, skip_coordinate_rule = self.trace_basic(stroke_dict, key, unicode_int, bmp_image, y_offset, inside_stroke_dict, skip_coordinate, skip_coordinate_rule)
             if base_is_modified:
                 is_modified = True
@@ -762,13 +762,13 @@ class Spline():
         # ==================================================
         is_common_enable = True
 
-        if self.config.PROCESS_MODE in ["B2","B4","XD","HALFMOON"]:
+        if self.config.PROCESS_MODE in ["B2","B4","XD","RAINBOW","HALFMOON"]:
             is_common_enable = False
 
         if is_common_enable:
             is_modified, inside_stroke_dict, skip_coordinate, skip_coordinate_rule = self.trace_common(stroke_dict, key, unicode_int, bmp_image, y_offset, inside_stroke_dict, skip_coordinate, skip_coordinate_rule)
 
-        if self.config.PROCESS_MODE in ["XD","HALFMOON"]:
+        if self.config.PROCESS_MODE in ["XD","RAINBOW","HALFMOON"]:
             base_is_modified, inside_stroke_dict, skip_coordinate, skip_coordinate_rule = self.trace_basic(stroke_dict, key, unicode_int, bmp_image, y_offset, inside_stroke_dict, skip_coordinate, skip_coordinate_rule)
             if base_is_modified:
                 is_modified = True

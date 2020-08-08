@@ -132,6 +132,12 @@ class Rule(Rule.Rule):
                         is_match_d_base_rule, fail_code = self.going_xd_down(format_dict_array,idx)
                         is_match_pattern = is_match_d_base_rule
 
+                # for RAINBOW
+                if self.config.PROCESS_MODE in ["RAINBOW"]:
+                    if is_match_pattern:
+                        is_match_d_base_rule, fail_code = self.going_xd_down(format_dict_array,idx)
+                        is_match_pattern = not is_match_d_base_rule
+
                 previous_x,previous_y=0,0
                 next_x,next_y=0,0
 
