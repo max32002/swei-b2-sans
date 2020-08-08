@@ -2,6 +2,8 @@
 
 獅尾B2黑體基於[思源黑體](https://github.com/adobe-fonts/source-han-sans)的轉角的三角形轉成半圓形改造，彷彿墨暈或是稍微過曝的效果。支援简体中文、繁體中文、韓文與日文；歡迎大家自由應用、自由優化、自由改作！
 
+「獅尾B2腿黑體」和「獅尾B2黑體」差別有有沒有拔腳。「有拔腳」的字會較圓，但是會造成有些字因直接去掉腿後左右不平衡、左右不對襯的「懸空」問題。使用「腿」系列就比較不會有問題。
+
 和思源黑體一樣，支援7種的字重：
 ![字體預覽](https://github.com/max32002/swei-b2-sans/raw/master/preview/compare_style.png)
 
@@ -71,6 +73,8 @@
 https://max-everyday.com/2020/08/swei-gothic-leg/
 * 獅尾彩虹腿 Swei.Rainbow.Leg
 https://max-everyday.com/2020/08/swei-rainbow-leg/
+* 獅尾B2腿黑體 Swei B2 Leg
+https://max-everyday.com/2020/07/swei-b2-leg/
 * 花園肉丸 Hana Meatball
 https://max-everyday.com/2020/08/hana-meatball/
 * B2花園 B2 Hana
